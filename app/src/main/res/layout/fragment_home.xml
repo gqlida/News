@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.youworkshop.teslanews.activity.HomeActivity">
+
+    <FrameLayout
+        android:id="@+id/ll"
+        android:layout_weight="7"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="0dp">
+    </FrameLayout>
+
+    <View
+        android:background="@color/colorDot"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <RadioGroup
+        android:id="@+id/rg_buttons"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="49.5dp">
+        <RadioButton
+            android:id="@+id/tab_home"
+            android:checked="true"
+            android:text="@string/tab_home"
+            android:drawableTop="@drawable/selector_btn_home"
+            style="@style/RadioButtonStyle"/>
+        <RadioButton
+            android:id="@+id/tab_news"
+            android:text="@string/tab_news"
+            android:drawableTop="@drawable/selector_btn_news"
+            style="@style/RadioButtonStyle"/>
+        <RadioButton
+            android:id="@+id/tab_videos"
+            android:text="@string/tab_video"
+            android:drawableTop="@drawable/selector_btn_video"
+            style="@style/RadioButtonStyle"/>
+        <RadioButton
+            android:id="@+id/tab_govs"
+            android:text="@string/tab_gov"
+            android:drawableTop="@drawable/selector_btn_gov"
+            style="@style/RadioButtonStyle"/>
+        <RadioButton
+            android:id="@+id/tab_setting"
+            android:text="@string/tab_setting"
+            android:drawableTop="@drawable/selector_btn_setting"
+            style="@style/RadioButtonStyle"/>
+    </RadioGroup>
+
+</LinearLayout>
