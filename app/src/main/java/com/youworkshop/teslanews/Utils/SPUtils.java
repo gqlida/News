@@ -24,5 +24,20 @@ public class SPUtils {
          }
          return sharedPreferences.edit().putBoolean(key,value).commit();
      }
+
+     public static void saveNewsInfo(Context context,String key,String value){
+         if (sharedPreferences == null){
+             sharedPreferences = context.getSharedPreferences("json",Context.MODE_PRIVATE);
+         }
+         sharedPreferences.edit().putString(key,value).apply();
+     }
+
+     public static String getNewsInfo(Context context,String key,String defValue){
+         if (sharedPreferences == null){
+             sharedPreferences = context.getSharedPreferences("json",Context.MODE_PRIVATE);
+         }
+         String json = sharedPreferences.getString(key, defValue);
+         return  json;
+     }
 }
 

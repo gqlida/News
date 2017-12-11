@@ -69,12 +69,10 @@ public class GuideActivity extends Activity {
 
             @Override
             public void onPageSelected(int position) {
-
             }
 
             @Override
             public void onPageScrollStateChanged(int state) {
-
             }
         });
 

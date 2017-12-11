@@ -24,12 +24,11 @@ public class HomeActivity extends SlidingFragmentActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
         int widthPixels = getResources().getDisplayMetrics().widthPixels;
-
         slidingMenu = getSlidingMenu();
         setBehindContentView(R.layout.layout_slidingmenu);
-        slidingMenu.setBackgroundResource(R.color.colorText);
+        slidingMenu.setBackgroundResource(R.drawable.sliding_bg);
+//        slidingMenu.setBackgroundResource(R.color.colorText);
         slidingMenu.setBehindWidth(widthPixels/3);
         slidingMenu.setMode(SlidingMenu.LEFT);
         slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_NONE);

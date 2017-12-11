@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config=":library"><source path="/Users/MacBookAir/Desktop/Projects/News/library/build/intermediates/bundles/debug/assets"/></dataSet><dataSet config="main"><source path="/Users/MacBookAir/Desktop/Projects/News/sample/src/main/assets"/><source path="/Users/MacBookAir/Desktop/Projects/News/sample/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/Users/MacBookAir/Desktop/Projects/News/sample/src/debug/assets"/></dataSet></merger>

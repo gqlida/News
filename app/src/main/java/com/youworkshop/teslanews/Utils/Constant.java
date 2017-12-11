@@ -6,4 +6,5 @@ package com.youworkshop.teslanews.Utils;
 
 public class Constant {
     public static final String IS_FIRST = "is_first";
+    public static final String CATAGORY = "category";
 }

@@ -1,5 +1,7 @@
 package com.youworkshop.teslanews.page;
 
+import android.view.View;
+
 import com.youworkshop.teslanews.R;
 import com.youworkshop.teslanews.base.BaseFragment;
 
@@ -8,14 +10,15 @@ import com.youworkshop.teslanews.base.BaseFragment;
  */
 
 public class GovFragment extends BaseFragment {
+
     @Override
     public void initData() {
-        tabTitle.setText("Gov");
-
+        tabTitle.setText(R.string.tab_gov);
+        centerIconText.setText(R.string.text_gov);
     }
 
     @Override
     public void initView() {
-        centerIcon.setImageResource(R.drawable.btn_gov_selected);
+//        centerIcon.setImageResource(R.drawable.btn_gov_selected);
     }
 }

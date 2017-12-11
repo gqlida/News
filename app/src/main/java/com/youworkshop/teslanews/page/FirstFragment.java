@@ -20,11 +20,12 @@ public class FirstFragment extends BaseFragment {
     public void initData() {
         tabSliding.setVisibility(View.GONE);
         tabType.setVisibility(View.GONE);
-        tabTitle.setText("Home");
+        tabTitle.setText(R.string.tab_home);
+        centerIconText.setText(R.string.text_home);
     }
 
     @Override
     public void initView() {
-        centerIcon.setImageResource(R.drawable.btn_home_selected);
+//        centerIcon.setImageResource(R.drawable.btn_home_selected);
     }
 }

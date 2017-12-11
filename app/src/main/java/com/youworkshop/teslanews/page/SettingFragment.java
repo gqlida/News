@@ -14,11 +14,12 @@ public class SettingFragment extends BaseFragment {
     public void initData() {
         tabSliding.setVisibility(View.GONE);
         tabType.setVisibility(View.GONE);
-        tabTitle.setText("Setting");
+        tabTitle.setText(R.string.tab_setting);
+        centerIconText.setText(R.string.text_setting);
     }
 
     @Override
     public void initView() {
-        centerIcon.setImageResource(R.drawable.btn_setting_selected);
+//        centerIcon.setImageResource(R.drawable.btn_setting_selected);
     }
 }

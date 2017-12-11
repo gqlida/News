@@ -10,12 +10,12 @@ import com.youworkshop.teslanews.base.BaseFragment;
 public class VideoFragment extends BaseFragment {
     @Override
     public void initData() {
-        tabTitle.setText("Video");
-
+        tabTitle.setText(R.string.tab_video);
+        centerIconText.setText(R.string.text_video);
     }
 
     @Override
     public void initView() {
-        centerIcon.setImageResource(R.drawable.btn_video_selected);
+//        centerIcon.setImageResource(R.drawable.btn_video_selected);
     }
 }

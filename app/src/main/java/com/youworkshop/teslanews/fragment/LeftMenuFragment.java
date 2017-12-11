@@ -4,29 +4,38 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.youworkshop.teslanews.R;
+import com.youworkshop.teslanews.activity.HomeActivity;
+import com.youworkshop.teslanews.bean.EventBusMesInfo;
+
+import org.greenrobot.eventbus.EventBus;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 /**
+ * 左侧的菜单
  * Created by Tony on 2017/12/9.
  */
 
 public class LeftMenuFragment extends Fragment {
-    String[] slidingName = {"News", "News", "News", "News"};
+    String[] slidingName = {"新闻", "专题", "组图", "互动"};
     @BindView(R.id.ll_leftMenu)
     ListView llLeftMenu;
     Unbinder unbinder;
+    @BindView(R.id.ll_leftMenu_above)
+    LinearLayout llLeftMenuAbove;
 
     @Nullable
     @Override
@@ -39,7 +48,21 @@ public class LeftMenuFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        final leftMenuAdapter leftMenuAdapter = new leftMenuAdapter();
         llLeftMenu.setAdapter(new leftMenuAdapter());
+        llLeftMenu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                leftMenuAdapter.notifyDataSetChanged();
+                HomeActivity activity = (HomeActivity) getActivity();
+                activity.getSlidingMenu().toggle();
+                EventBus.getDefault().post(new EventBusMesInfo(position));
+            }
+        });
+        int heightPixels = getActivity().getResources().getDisplayMetrics().heightPixels;
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT, heightPixels / 3);
+        llLeftMenuAbove.setLayoutParams(layoutParams);
     }
 
     @Override

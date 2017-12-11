@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.youworkshop.teslanews.R;
@@ -31,8 +31,12 @@ public class BaseFragment extends Fragment {
     @BindView(R.id.tab_type)
     public Button tabType;
     Unbinder unbinder;
-    @BindView(R.id.centerIcon)
-    public ImageView centerIcon;
+    //    @BindView(R.id.centerIcon)
+//    public ImageView centerIcon;
+    @BindView(R.id.centerIconText)
+    public TextView centerIconText;
+    @BindView(R.id.fl_news_frag)
+    public FrameLayout flNewsFrag;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
